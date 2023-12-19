@@ -1,0 +1,43 @@
+<div class="device-selector">
+  <form class="form" [formGroup]="form">
+    <div class="form-group">
+      <label class="form-group__label" for="device">Device</label>
+      <div class="form-control">
+        <select
+          formControlName="device"
+          name="device"
+          id="device"
+          class="form-control__input"
+        >
+          <option *ngFor="let device of devices" [value]="device.id">
+            {{ device.name }}
+          </option>
+        </select>
+        <small class="form-control__error-label" *ngIf="isDeviceInvalid"
+          >Please select a device</small
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-group__label" for="device">Programmer</label>
+      <div class="form-control">
+        <select
+          formControlName="programmer"
+          name="programmer"
+          id="programmer"
+          class="form-control__input"
+        >
+          <option
+            *ngFor="let programmer of programmers"
+            [value]="programmer.id"
+          >
+            {{ programmer.name }}
+          </option>
+        </select>
+        <small class="form-control__error-label" *ngIf="isProgrammerInvalid"
+          >Please select a programmer
+        </small>
+      </div>
+    </div>
+  </form>
+</div>

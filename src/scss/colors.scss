@@ -1,0 +1,46 @@
+$palettes: (
+  primary: (
+    900: #007bff,
+    800: #03396c,
+    700: #005b96,
+    600: #6497b1,
+    500: #b3cde0,
+    400: #92d2f9,
+    300: #a8b18d,
+    200: #a8daf9,
+    100: #bbdcf0,
+    50: #cde2ee,
+  ),
+  grayscale: (
+    900: #4b4b4d,
+    800: #5e5f61,
+    700: #737375,
+    600: #87888a,
+    500: #9d9e9f,
+    400: #b3b4b5,
+    300: #c9cacc,
+    200: #e0e1e3,
+    100: #b9be9a,
+    50: #f8f9fa,
+  ),
+  neutral: (
+    white: #ffffff,
+    black: #000000,
+  ),
+  status: (
+    success: #729365,
+    danger: #dc3545,
+    info: #535971,
+    warning: #ffc107,
+  ),
+);
+
+:root,
+:host {
+  @each $colorname, $paleton in $palettes {
+    @each $key, $value in $paleton {
+      $keyname: "--" + $colorname + "-" + $key;
+      #{$keyname}: #{$value};
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<form [formGroup]="form">
+  <label for="deviceName">Device Name</label>
+  <div class="form-control">
+    <input
+      type="text"
+      id="deviceName"
+      class="form-control__input"
+      formControlName="deviceName"
+      aria-label="Device name"
+      placeholder="Device 5"
+    />
+    <small class="form-control__error-label" *ngIf="isInpuValid"
+      >Please enter new device name
+    </small>
+  </div>
+</form>

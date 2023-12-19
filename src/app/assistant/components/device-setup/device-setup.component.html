@@ -1,0 +1,10 @@
+<div class="setup">
+  <div class="setup-content">
+    <ng-content></ng-content>
+  </div>
+  <div class="setup-footer">
+    <button *ngIf="showNextButton" class="btn" (click)="handleNext()">
+      {{ buttonText }}
+    </button>
+  </div>
+</div>

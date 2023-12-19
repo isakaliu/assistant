@@ -1,0 +1,20 @@
+.setup-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin: 24px 0;
+}
+
+.setup-overview-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.setup-overview-content__label,
+.setup-overview-content__title {
+  margin: 0;
+  color: var(--grayscale-900);
+}

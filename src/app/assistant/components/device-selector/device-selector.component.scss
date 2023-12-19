@@ -1,0 +1,23 @@
+.device-selector {
+  padding: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-control {
+  grid-column: 2 / 4;
+  display: flex;
+  flex-direction: column;
+}

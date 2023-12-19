@@ -1,0 +1,23 @@
+<div class="modal-container" role="dialog" tabindex="-1" aria-hidden="true">
+  <div
+    class="modal-content"
+    id="modal"
+    role="document"
+    aria-describedby="modal-body"
+  >
+    <section class="modal-header">
+      <h2 class="modal-header__title">{{ title }}</h2>
+      <button
+        class="btn modal-header__close"
+        data-testid="close-btn"
+        aria-label="Close dialog"
+        (click)="close()"
+      >
+        X
+      </button>
+    </section>
+    <section class="modal-body" id="modal-body">
+      <ng-content></ng-content>
+    </section>
+  </div>
+</div>

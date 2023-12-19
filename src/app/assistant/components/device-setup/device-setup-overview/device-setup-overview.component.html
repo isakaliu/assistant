@@ -1,0 +1,9 @@
+<div class="setup-overview">
+  <div class="setup-overview-content">
+    <h2 *ngIf="title" class="setup-overview-content__title">{{ title }}</h2>
+    <p *ngIf="description" class="setup-overview-content__label">
+      {{ description }}
+    </p>
+  </div>
+  <ng-content></ng-content>
+</div>

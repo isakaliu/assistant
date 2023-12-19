@@ -1,0 +1,32 @@
+<button class="btn" (click)="displayModal()">Open Assistant</button>
+
+<app-modal
+  id="assistant"
+  *ngIf="modalVars['assistant']"
+  title="Assistant"
+  (closeModal)="displayModal(false)"
+>
+  <app-device-selector
+    [devices]="devices"
+    [programmers]="programmers"
+    [form]="deviceSelectForm"
+    [isFormSubmitted]="isFormSubmitted"
+  ></app-device-selector>
+  <app-device-setup
+    [showNextButton]="shouldShowNextButton"
+    (nextClicked)="moveToNextStep()"
+    [buttonText]="setupOverviewMetaData.buttonText"
+  >
+    <app-device-setup-overview
+      [title]="setupOverviewMetaData.title"
+      [description]="setupOverviewMetaData.description"
+    >
+      <app-progress-bar *ngIf="isLoading | async"></app-progress-bar>
+    </app-device-setup-overview>
+    <app-device-duplication
+      *ngIf="shouldShowDeviceDuplication"
+      [form]="deviceDuplicationForm"
+      [isFormSubmitted]="isFormSubmitted"
+    ></app-device-duplication>
+  </app-device-setup>
+</app-modal>
